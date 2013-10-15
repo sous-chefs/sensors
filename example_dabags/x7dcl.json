@@ -1,0 +1,48 @@
+{
+  "id": "x7dcl",
+  "description": "SuperMicro X7DCL",
+  "chips": [
+    {
+      "id": "w83627hf-isa-0290",
+      "ignores": [
+        "in0",
+        "in1",
+        "in2",
+        "in3",
+        "in4",
+        "in5",
+        "in6",
+        "in7",
+        "in8",
+        "fan1",
+        "fan2",
+        "fan3",
+        "cpu0_vid",
+        "beep_enable"
+      ]
+    },
+    {
+      "id": "w83792d-i2c-*-2f",
+      "ignores": [
+        "in0",
+        "in1",
+        "in2",
+        "in3",
+        "in4",
+        "in5",
+        "in6",
+        "in7",
+        "in8",
+        "in9",
+        "fan5",
+        "fan6",
+        "fan7",
+        "fan8",
+        "fan9",
+        "fan10",
+        "beep_enable",
+        "intrusion0"
+      ]
+    }
+  ]
+}
