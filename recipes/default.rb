@@ -52,7 +52,9 @@ if !node['ec2'] && !node['virtualization']['role'] && !node['sensors']['ignored_
       source 'sensors.erb'
       mode 00644
       notifies :restart, 'service[lm-sensors]'
-      notifies :restart, 'service[collectd]'
+      if node['recipes'].include?('collectd::default') || node['recipes'].include?('collectd')
+        notifies :restart, 'service[collectd]'
+      end
       variables(
         :sensor_config => sensor_config
       )
