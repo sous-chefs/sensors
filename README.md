@@ -1,6 +1,6 @@
-sensors Cookbook
+Sensors Cookbook
 ================
-Cookbook to manage hardware sensors via lm-sensors on Linux systems.  Installs only on hardware systems, allows for the blacklisting of mainboards by model, and allows for defining data bags to specify individual ignored sensors values that will not be polled. 
+Cookbook to manage hardware sensors via lm-sensors on Linux systems.  Installs only on hardware systems, allows for the blacklisting of mainboards by model, and allows for defining data bags to specify individual ignored sensors values that will not be polled.
 
 
 Requirements
@@ -8,15 +8,24 @@ Requirements
 ### Chef
 Chef version 0.10.10+ and Ohai 0.6.12+ are required.
 
-### Platform
-* Ubuntu 10.04 or later
-* RHEL 5 or later
+### Platform:
 
+* Debian
+* Ubuntu
+* Centos
+* Redhat
+* Amazon
+* Oracle
+* Scientific
+
+### Cookbooks:
+
+*No dependencies defined*
 
 Attributes
 ----------
 `default['sensors']['service_name']` - automatically set based on platform. Debian derivatives: lm-sensors & RHEL derivatives: lm_sensors
-`default['sensors']['ignored_mainboards']` - If these mainboards are discovered by Ohai the recipe will be skipped.  This is a workaround "twin" servers manufacturered by Supermicro that have faulty sensor chipsets design, resulting in system hangs when polling sensor data.  Defaults to X8DTL and X8DTT-H 
+`default['sensors']['ignored_mainboards']` - If these mainboards are discovered by Ohai the recipe will be skipped.  This is a workaround "twin" servers manufacturered by Supermicro that have faulty sensor chipsets design, resulting in system hangs when polling sensor data.  Defaults to X8DTL and X8DTT-H
 
 Data Bags
 ---------
@@ -74,7 +83,12 @@ This cookbook uses an optional data bag item per mainboard to configure "ignore"
   ]
 }
 ```
+License and Author
+------------------
 
-License and Authors
--------------------
-Authors: Tim Smith <tsmith@limelight.com>
+Author:: Limelight Networks, Inc. (<tsmith@limelight.com>)
+
+Copyright:: 2013, Limelight Networks, Inc.
+
+License:: All rights reserved
+
