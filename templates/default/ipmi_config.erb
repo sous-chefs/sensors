@@ -1,0 +1,9 @@
+# settings for the <%= @sensor_config['description'] %>
+LoadPlugin "ipmi"
+
+<Plugin "ipmi">
+<% @sensor_config['sensors'].each do |sensor| -%>
+Sensor "<%= sensor %>"
+<% end -%>
+IgnoreSelected true
+</Plugin>
