@@ -23,5 +23,3 @@ when 'debian'
 else
   default['sensors']['service_name']  = 'lm_sensors'
 end
-
-default['sensors']['ignored_mainboards'] = %w{ X8DTL X8DTT-H }
