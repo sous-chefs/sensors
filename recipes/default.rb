@@ -78,9 +78,17 @@ if !node['ec2'] && !node['virtualization']['role']
 
     # if using collectd template out the ipmi plugin config.  The LWRP isn't advanced enough to do this at the moment.
     if node['recipes'].include?('collectd::default') || node['recipes'].include?('collectd')
+      directory '/etc/collectd/plugins/' do
+        owner 'root'
+        group 'root'
+        mode '0755'
+        recursive true
+        action :create
+      end
+
       template '/etc/collectd/plugins/ipmi.conf' do
         source 'ipmi_config.erb'
-        mode 00644
+        mode '0644'
         notifies :restart, 'service[collectd]'
         variables(
           :sensor_config => sensor_config
