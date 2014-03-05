@@ -58,7 +58,7 @@ if !node['ec2'] && !node['virtualization']['role']
 
     template "/etc/sensors.d/#{node['dmi']['base_board']['product_name'].downcase}" do
       source 'lmsensors_config.erb'
-      mode 00644
+      mode '0644'
       notifies :restart, 'service[lm-sensors]'
       notifies :restart, 'service[collectd]' if node['recipes'].include?('collectd::default') || node['recipes'].include?('collectd')
       variables(
