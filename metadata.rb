@@ -6,6 +6,6 @@ description      'Installs/Configures sensor polling using lm-sensors or openipm
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.9.1'
 
-%w{ debian ubuntu centos redhat oracle scientific }.each do |os|
+%w(debian ubuntu centos redhat oracle scientific).each do |os|
   supports os
 end
