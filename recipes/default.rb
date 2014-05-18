@@ -18,7 +18,7 @@
 #
 
 # Don't run on EC2 or virtualized systems
-if !node['ec2'] && !node['virtualization']['role']
+unless node['ec2'] || node['virtualization']['role'] == 'guest'
 
   # try to load the sensor config data bag for this node.  If it doesn't exist we'll do nothing
   begin
