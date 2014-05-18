@@ -100,7 +100,7 @@ License and Author
 
 Author:: Limelight Networks, Inc. (<tsmith@limelight.com>)
 
-Copyright:: 2013, Limelight Networks, Inc.
+Copyright:: 2013-2014, Limelight Networks, Inc.
 
 License:: Apache 2.0
 
