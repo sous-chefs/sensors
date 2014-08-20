@@ -17,14 +17,23 @@
 # limitations under the License.
 #
 
+# method to sanitize the possible names for the mainboard
+def sanitize_name(name)
+  name = name.downcase # data bags are lowercase
+  name = name.gsub('+', '') # + symbols aren't valid for mainboards
+  name = name.split('/')[0] # some mainboards report multiple models sep by /
+  name
+end
+
 # Don't run on EC2 or virtualized systems
 unless node['ec2'] || node['virtualization']['role'] == 'guest'
 
+  mainboard = sanitize_name(node['dmi']['base_board']['product_name'])
   # try to load the sensor config data bag for this node.  If it doesn't exist we'll do nothing
   begin
-    sensor_config = data_bag_item('sensors', node['dmi']['base_board']['product_name'].downcase)
+    sensor_config = data_bag_item('sensors', mainboard)
   rescue
-    Chef::Log.info("Mainboard #{node['dmi']['base_board']['product_name'].downcase} does not have a data bag.  Not setting up sensor data gathering")
+    Chef::Log.info("Mainboard #{mainboard} does not have a data bag.  Not setting up sensor data gathering")
     return
   end
 
@@ -97,7 +106,7 @@ unless node['ec2'] || node['virtualization']['role'] == 'guest'
     end
 
   else # if type isn't lmsensors or ipmi it's an invalid type and we should log an error
-    Chef::Log.error("The databag for mainboard #{node['dmi']['base_board']['product_name'].downcase} lists the invalid type #{sensor_config['type']}")
+    Chef::Log.error("The databag for mainboard #{mainboard} lists the invalid type #{sensor_config['type']}")
   end
 
 end
