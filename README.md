@@ -100,7 +100,7 @@ This cookbook uses a required data bag item per mainboard to configure which sen
 License and Author
 ------------------
 
-Author:: Limelight Networks, Inc. (<tsmith@limelight.com>)
+Author:: Tim Smith (<tsmith84@gmail.com>)
 
 Copyright:: 2013-2014, Limelight Networks, Inc.
 
