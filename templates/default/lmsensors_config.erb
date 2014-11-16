@@ -1,8 +1,10 @@
-# settings for the <%= @sensor_config['description'] %>
+# settings for the <%= @sensor_config['description'] || @sensor_config['id']%>
 
+<% if @sensor_config['chips']
 <% @sensor_config['chips'].each do |chip| -%>
 chip "<%= chip['id'] %>"
 <% chip['ignores'].sort.each do |ignore| -%>
 ignore <%= ignore %>
+<% end -%>
 <% end -%>
 <% end -%>
