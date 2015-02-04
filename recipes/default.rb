@@ -41,29 +41,7 @@ unless node['ec2'] || node['virtualization']['role'] == 'guest'
   case sensor_config['type']
   when 'lmsensors'
 
-    # install the lm-sensors package
-    package node['sensors']['service_name'] do
-      action :install
-    end
-
-    # make sure lm-sensors is started and enabled to start at boot
-    service node['sensors']['service_name'] do
-      supports :status => true, :restart => true
-      action [:enable, :start]
-    end
-
-    # manage module-init-tools so we can restart it if we add modules to the config
-    service 'module-init-tools' do
-      action :nothing
-    end
-
-    # run the sensor module detection (only once) and then restart module-init-tools
-    execute 'load_sensor_modules' do
-      command "/usr/bin/yes | /usr/sbin/sensors-detect && touch #{Chef::Config[:file_cache_path]}/sensors_detect_ran"
-      creates "#{Chef::Config[:file_cache_path]}/sensors_detect_ran"
-      notifies :restart, 'service[module-init-tools]'
-      action :run
-    end
+    include_recipe 'sensors::_install_lmsensors'
 
     template "/etc/sensors.d/#{node['dmi']['base_board']['product_name'].downcase}" do
       source 'lmsensors_config.erb'
@@ -81,9 +59,7 @@ unless node['ec2'] || node['virtualization']['role'] == 'guest'
 
   when 'ipmi'
 
-    package 'libopenipmi0' do
-      action :install
-    end
+    include_recipe 'sensors::_install_ipmi'
 
     # if using collectd template out the ipmi plugin config.  The LWRP isn't advanced enough to do this at the moment.
     if node['recipes'].include?('collectd::default') || node['recipes'].include?('collectd')

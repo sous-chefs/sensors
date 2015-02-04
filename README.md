@@ -103,6 +103,7 @@ License and Author
 Author:: Tim Smith (<tsmith84@gmail.com>)
 
 Copyright:: 2013-2014, Limelight Networks, Inc.
+Copyright:: 2015, Cozy Services, Ltd.
 
 License:: Apache 2.0
 
