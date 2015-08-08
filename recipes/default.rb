@@ -20,7 +20,7 @@
 # method to sanitize the possible names for the mainboard
 def sanitize_name(name)
   name = name.downcase # data bags are lowercase
-  name = name.gsub('+', '') # + symbols aren't valid for mainboards
+  name = name.delete('+') # + symbols aren't valid for mainboards
   name = name.split('/')[0] # some mainboards report multiple models sep by /
   name
 end
@@ -49,7 +49,7 @@ unless node['ec2'] || node['virtualization']['role'] == 'guest'
       notifies :restart, 'service[lm-sensors]'
       notifies :restart, 'service[collectd]' if node['recipes'].include?('collectd::default') || node['recipes'].include?('collectd')
       variables(
-        :sensor_config => sensor_config
+        sensor_config: sensor_config
       )
     end
 
@@ -76,7 +76,7 @@ unless node['ec2'] || node['virtualization']['role'] == 'guest'
         mode '0644'
         notifies :restart, 'service[collectd]'
         variables(
-          :sensor_config => sensor_config
+          sensor_config: sensor_config
         )
       end
     end

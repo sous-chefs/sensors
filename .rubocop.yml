@@ -1,14 +1,14 @@
-AlignParameters:
-  Enabled: false
+AllCops:
+  Exclude:
+    - vendor/**/*
+
 CyclomaticComplexity:
   Enabled: false
 Encoding:
   Enabled: false
 LineLength:
   Enabled: false
-MethodLength:
-  Max: 30
-NumericLiterals:
+PerceivedComplexity:
   Enabled: false
-SingleSpaceBeforeFirstArg:
+AbcSize:
   Enabled: false

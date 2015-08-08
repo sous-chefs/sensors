@@ -25,7 +25,7 @@ end
 
 # make sure lm-sensors is started and enabled to start at boot
 service node['sensors']['service_name'] do
-  supports :status => true, :restart => true
+  supports status: true, restart: true
   action [:enable, :start]
 end
 

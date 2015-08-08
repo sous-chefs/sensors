@@ -19,7 +19,7 @@
 
 case node['platform_family']
 when 'debian'
-  default['sensors']['service_name']  = 'lm-sensors'
+  default['sensors']['service_name'] = 'lm-sensors'
 else
-  default['sensors']['service_name']  = 'lm_sensors'
+  default['sensors']['service_name'] = 'lm_sensors'
 end
