@@ -1,8 +1,6 @@
 require 'spec_helper'
 
 describe 'default installation' do
-  let(:chef_run) do
-    runner = ChefSpec::Runner.new(platform: 'ubuntu', version: '12.04')
-    runner.converge 'sensors::default'
-  end
+  let(:runner) { ChefSpec::ServerRunner.new(platform: 'ubuntu', version: '12.04') }
+  let(:chef_run) { runner.converge('smokeping::default') }
 end
