@@ -3,7 +3,7 @@ maintainer 'Tim Smith'
 maintainer_email 'tsmith84@gmail.com'
 license 'Apache 2.0'
 description 'Installs/Configures sensor polling using lm-sensors or openipmi on Linux systems'
-version '1.1.0'
+version '1.1.4'
 
 %w(debian ubuntu centos redhat fedora oracle scientific).each do |os|
   supports os

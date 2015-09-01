@@ -1,0 +1,19 @@
+sensors Cookbook CHANGELOG
+==========================
+This file is used to list changes made in each version of the sensors cookbook.
+
+v1.1.4
+------
+- Add changelog
+- Use stanard chef .gitignore file
+- Remove most of the rule disables in the rubocop file
+- Use travis container environment and test on Ruby 2.2
+- Update the supermarket URL in the berksfile
+- Update and breakout the deps in the Gemfile
+- Add a license file
+- Add a cookbook version badge
+- Set the minimum supported Chef version to 11 in the readme
+- Add more files to the chefignore file
+- Add fedora to the metadata as a supported platform
+- Add issues_url and source_url to the metadata file
+- Update specs to Chefspec 4 format
