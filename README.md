@@ -22,7 +22,7 @@ Chef 11+
 
 ### Cookbooks:
 
-*No dependencies defined*
+*None*
 
 Attributes
 ----------
