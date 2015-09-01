@@ -9,5 +9,5 @@ version '1.1.0'
   supports os
 end
 
-source_url 'https://github.com/tas50/sensors' if respond_to?(:source_url)
-issues_url 'https://github.com/tas50/sensors/issues' if respond_to?(:issues_url)
+source_url 'https://github.com/tas50/chef-sensors' if respond_to?(:source_url)
+issues_url 'https://github.com/tas50/chef-sensors/issues' if respond_to?(:issues_url)
