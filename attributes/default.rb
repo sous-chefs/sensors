@@ -17,9 +17,9 @@
 # limitations under the License.
 #
 
-case node['platform_family']
-when 'debian'
-  default['sensors']['service_name'] = 'lm-sensors'
-else
-  default['sensors']['service_name'] = 'lm_sensors'
-end
+default['sensors']['service_name'] = case node['platform_family']
+                                     when 'debian'
+                                       'lm-sensors'
+                                     else
+                                       'lm_sensors'
+                                     end
