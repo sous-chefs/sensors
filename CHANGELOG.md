@@ -2,6 +2,18 @@ sensors Cookbook CHANGELOG
 ==========================
 This file is used to list changes made in each version of the sensors cookbook.
 
+v1.1.5
+------
+- Swap the Rakefile for Delivery local mode
+- Update the ignore files
+- Remove the rubocop.yml file since we're using cookstyle now
+- Test in Travis using ChefDK which lets us remove the Gemfile
+- Cookstyle fixes
+- Add long_description metadata
+- Add chef_version metadata
+- Require Chef 12.1 or later since Chef 11 is EOL
+- Update the Chefspecs to do a bit more
+
 v1.1.4
 ------
 - Add changelog
