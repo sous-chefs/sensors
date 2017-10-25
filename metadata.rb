@@ -1,7 +1,7 @@
 name 'sensors'
 maintainer 'Tim Smith'
 maintainer_email 'tsmith84@gmail.com'
-license 'Apache 2.0'
+license 'Apache-2.0'
 description 'Installs/Configures sensor polling using lm-sensors or openipmi on Linux systems'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version '1.1.4'
@@ -10,7 +10,7 @@ version '1.1.4'
   supports os
 end
 
-source_url 'https://github.com/tas50/chef-sensors' if respond_to?(:source_url)
-issues_url 'https://github.com/tas50/chef-sensors/issues' if respond_to?(:issues_url)
+source_url 'https://github.com/tas50/chef-sensors'
+issues_url 'https://github.com/tas50/chef-sensors/issues'
 
-chef_version '>= 11.0' if respond_to?(:chef_version)
+chef_version '>= 12.1' if respond_to?(:chef_version)

@@ -9,7 +9,7 @@ Cookbook to manage hardware sensors via openipmi or lm-sensors on Linux systems.
 Requirements
 ------------
 ### Chef
-Chef 11+
+Chef 12.12.1+
 
 ### Platform
 
