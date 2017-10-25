@@ -2,17 +2,25 @@ sensors Cookbook CHANGELOG
 ==========================
 This file is used to list changes made in each version of the sensors cookbook.
 
+v1.1.6
+------
+- Remove the Gemfile
+- Add a TESTING.md file
+- Add a CONTRIBUTING.md file
+
 v1.1.5
 ------
 - Swap the Rakefile for Delivery local mode
 - Update the ignore files
 - Remove the rubocop.yml file since we're using cookstyle now
-- Test in Travis using ChefDK which lets us remove the Gemfile
+- Test in Travis using ChefDK
 - Cookstyle fixes
 - Add long_description metadata
 - Add chef_version metadata
 - Require Chef 12.1 or later since Chef 11 is EOL
 - Update the Chefspecs to do a bit more
+- Use a SPDX compliant license string
+
 
 v1.1.4
 ------
