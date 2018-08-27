@@ -1,6 +1,6 @@
 Sensors Cookbook
 ================
-[![Build Status](https://travis-ci.org/tas50/chef-sensors.svg?branch=master)](https://travis-ci.org/tas50/chef-sensors)
+[![Build Status](https://travis-ci.org/sous-chefs/sensors.svg?branch=master)](https://travis-ci.org/sous-chefs/sensors)
 [![Cookbook Version](https://img.shields.io/cookbook/v/sensors.svg)](https://supermarket.chef.io/cookbooks/sensors)
 
 Cookbook to manage hardware sensors via openipmi or lm-sensors on Linux systems.  Installs only on hardware systems. Defines sensors to poll via data bag items and installs either lm-sensors or openipmi to poll sensors depending on data bag attributes.
