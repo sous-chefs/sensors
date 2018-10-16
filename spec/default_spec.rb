@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'default installation' do
-  let(:runner) { ChefSpec::ServerRunner.new(platform: 'ubuntu', version: '16.04') }
+  let(:runner) { ChefSpec::ServerRunner.new(platform: 'ubuntu', version: '18.04') }
   let(:chef_run) { runner.converge('sensors::default') }
 
   it 'converges successfully' do
