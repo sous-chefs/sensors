@@ -8,6 +8,10 @@
 
 Cookbook to manage hardware sensors via openipmi or lm-sensors on Linux systems.  Installs only on hardware systems. Defines sensors to poll via data bag items and installs either lm-sensors or openipmi to poll sensors depending on data bag attributes.
 
+## Maintainers
+
+This cookbook is maintained by the Sous Chefs. The Sous Chefs are a community of Chef cookbook maintainers working together to maintain important cookbooks. If you’d like to know more please visit [sous-chefs.org](https://sous-chefs.org/) or come chat with us on the Chef Community Slack in [#sous-chefs](https://chefcommunity.slack.com/messages/C2V7B88SF).
+
 ## Requirements
 
 ### Chef
