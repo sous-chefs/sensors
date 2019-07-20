@@ -1,15 +1,15 @@
-sensors Cookbook CHANGELOG
-==========================
+# sensors Cookbook CHANGELOG
+
 This file is used to list changes made in each version of the sensors cookbook.
 
-v1.1.6
-------
+## v1.1.6
+
 - Remove the Gemfile
 - Add a TESTING.md file
 - Add a CONTRIBUTING.md file
 
-v1.1.5
-------
+## v1.1.5
+
 - Swap the Rakefile for Delivery local mode
 - Update the ignore files
 - Remove the rubocop.yml file since we're using cookstyle now
@@ -21,9 +21,8 @@ v1.1.5
 - Update the Chefspecs to do a bit more
 - Use a SPDX compliant license string
 
+## v1.1.4
 
-v1.1.4
-------
 - Add changelog
 - Use stanard chef .gitignore file
 - Remove most of the rule disables in the rubocop file
