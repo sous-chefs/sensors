@@ -1,14 +1,21 @@
-Sensors Cookbook
-================
-[![CircleCI](https://circleci.com/gh/sous-chefs/sensors.svg?style=svg)](https://circleci.com/gh/sous-chefs/sensors)
+# Sensors Cookbook
+
 [![Cookbook Version](https://img.shields.io/cookbook/v/sensors.svg)](https://supermarket.chef.io/cookbooks/sensors)
+[![Build Status](https://img.shields.io/circleci/project/github/sous-chefs/sensors/master.svg)](https://circleci.com/gh/sous-chefs/sensors)
+[![OpenCollective](https://opencollective.com/sous-chefs/backers/badge.svg)](#backers)
+[![OpenCollective](https://opencollective.com/sous-chefs/sponsors/badge.svg)](#sponsors)
+[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 
 Cookbook to manage hardware sensors via openipmi or lm-sensors on Linux systems.  Installs only on hardware systems. Defines sensors to poll via data bag items and installs either lm-sensors or openipmi to poll sensors depending on data bag attributes.
 
+## Maintainers
 
-Requirements
-------------
+This cookbook is maintained by the Sous Chefs. The Sous Chefs are a community of Chef cookbook maintainers working together to maintain important cookbooks. If you’d like to know more please visit [sous-chefs.org](https://sous-chefs.org/) or come chat with us on the Chef Community Slack in [#sous-chefs](https://chefcommunity.slack.com/messages/C2V7B88SF).
+
+## Requirements
+
 ### Chef
+
 Chef 12.12.1+
 
 ### Platform
@@ -20,21 +27,17 @@ Chef 12.12.1+
 * Oracle
 * Scientific
 
-### Cookbooks:
+### Attributes
 
-*None*
-
-Attributes
-----------
 `default['sensors']['service_name']` - automatically set based on platform. Debian derivatives: lm-sensors & RHEL derivatives: lm_sensors
 
-Data Bags
----------
+### Data Bags
 
 This cookbook uses a required data bag item per mainboard to configure which sensors should be ignored. This allows you to ignore fans or temperature sensors present in the chipset, but not actually used by the system manufacturer.  The cookbook will attempt to load a databag item with the ID of the mainboard in the `sensors` data bag.  The ID can be found using Ohai at `node['dmi']['base_board']['product_name']`.  Example data bags are included in the example_databags directory.
 
 #### Example data bag for a non-IPMI systems, which will use lm-sensors
-```
+
+```ruby
 {
   "id": "x7dvl",
   "description": "SuperMicro X7DVL",
@@ -87,7 +90,8 @@ This cookbook uses a required data bag item per mainboard to configure which sen
 ```
 
 #### Example data bag for an IPMI systems, which will use OpenIPMI
-```
+
+```ruby
 {
   "id": "x8dtt-h",
   "description": "SuperMicro X8DTT-H",
@@ -98,24 +102,27 @@ This cookbook uses a required data bag item per mainboard to configure which sen
 }
 ```
 
-License and Author
-------------------
+## Contributors
 
-Author:: Tim Smith (<tsmith84@gmail.com>)
+This project exists thanks to all the people who [contribute.](https://opencollective.com/sous-chefs/contributors.svg?width=890&button=false)
 
-```text
-Copyright:: 2013-2014, Limelight Networks, Inc.
-Copyright:: 2015, Cozy Services, Ltd.
+### Backers
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+Thank you to all our backers!
 
-    http://www.apache.org/licenses/LICENSE-2.0
+![https://opencollective.com/sous-chefs#backers](https://opencollective.com/sous-chefs/backers.svg?width=600&avatarHeight=40)
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-```
+### Sponsors
+
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website.
+
+![https://opencollective.com/sous-chefs/sponsor/0/website](https://opencollective.com/sous-chefs/sponsor/0/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/1/website](https://opencollective.com/sous-chefs/sponsor/1/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/2/website](https://opencollective.com/sous-chefs/sponsor/2/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/3/website](https://opencollective.com/sous-chefs/sponsor/3/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/4/website](https://opencollective.com/sous-chefs/sponsor/4/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/5/website](https://opencollective.com/sous-chefs/sponsor/5/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/6/website](https://opencollective.com/sous-chefs/sponsor/6/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/7/website](https://opencollective.com/sous-chefs/sponsor/7/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/8/website](https://opencollective.com/sous-chefs/sponsor/8/avatar.svg?avatarHeight=100)
+![https://opencollective.com/sous-chefs/sponsor/9/website](https://opencollective.com/sous-chefs/sponsor/9/avatar.svg?avatarHeight=100)
