@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of the sensors cookbook.
 
+## Unreleased
+- run latest cookstyle
+
 ## v1.1.6
 
 - Remove the Gemfile
