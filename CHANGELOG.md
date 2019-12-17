@@ -4,7 +4,8 @@ This file is used to list changes made in each version of the sensors cookbook.
 
 ## Unreleased
 
-- run latest cookstyle
+- Run latest cookstyle
+- Simplify platform detection logic in the attributes file
 
 ## v1.1.6
 
