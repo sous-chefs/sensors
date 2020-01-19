@@ -6,6 +6,7 @@ This file is used to list changes made in each version of the sensors cookbook.
 
 - Run latest cookstyle
 - Simplify platform detection logic in the attributes file
+- Migrate to actions
 
 ## v1.1.6
 
