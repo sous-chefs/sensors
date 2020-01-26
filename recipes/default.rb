@@ -29,7 +29,7 @@ end
 unless node['ec2'] || node['virtualization']['role'] == 'guest'
 
   mainboard = sanitize_name(node['dmi']['base_board']['product_name'])
-  # try to load the sensor config data bag for this node.  If it doesn't exist we'll do nothing
+  # try to load the sensor config data bag for this node. If it doesn't exist we'll do nothing
   begin
     sensor_config = data_bag_item('sensors', mainboard)
   rescue
@@ -61,7 +61,7 @@ unless node['ec2'] || node['virtualization']['role'] == 'guest'
 
     include_recipe 'sensors::_install_ipmi'
 
-    # if using collectd template out the ipmi plugin config.  The LWRP isn't advanced enough to do this at the moment.
+    # if using collectd template out the ipmi plugin config. The LWRP isn't advanced enough to do this at the moment.
     if node['recipes'].include?('collectd::default') || node['recipes'].include?('collectd')
       directory '/etc/collectd/plugins/' do
         owner 'root'
