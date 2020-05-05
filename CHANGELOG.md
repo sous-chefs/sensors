@@ -2,19 +2,19 @@
 
 This file is used to list changes made in each version of the sensors cookbook.
 
-## Unreleased
+## 1.2.0 - 2020-05-05
 
 - Run latest cookstyle
 - Simplify platform detection logic in the attributes file
 - Migrate to actions
 
-## v1.1.6
+## 1.1.6
 
 - Remove the Gemfile
 - Add a TESTING.md file
 - Add a CONTRIBUTING.md file
 
-## v1.1.5
+## 1.1.5
 
 - Swap the Rakefile for Delivery local mode
 - Update the ignore files
@@ -27,7 +27,7 @@ This file is used to list changes made in each version of the sensors cookbook.
 - Update the Chefspecs to do a bit more
 - Use a SPDX compliant license string
 
-## v1.1.4
+## 1.1.4
 
 - Add changelog
 - Use stanard chef .gitignore file
