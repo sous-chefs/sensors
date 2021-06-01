@@ -3,7 +3,7 @@ maintainer 'Sous Chefs'
 maintainer_email 'help@sous-chefs.org'
 license 'Apache-2.0'
 description 'Installs/Configures sensor polling using lm-sensors or openipmi on Linux systems'
-version '1.2.6'
+version '1.2.7'
 
 %w(debian ubuntu centos redhat fedora oracle scientific).each do |os|
   supports os
