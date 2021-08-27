@@ -25,7 +25,7 @@ def sanitize_name(name)
 end
 
 # Don't run on EC2 or virtualized systems
-unless node['ec2'] || node['virtualization']['role'] == 'guest'
+unless ec2? || node['virtualization']['role'] == 'guest'
 
   mainboard = sanitize_name(node['dmi']['base_board']['product_name'])
   # try to load the sensor config data bag for this node. If it doesn't exist we'll do nothing

@@ -4,6 +4,7 @@ This file is used to list changes made in each version of the sensors cookbook.
 
 ## Unreleased
 
+- resolved cookstyle error: recipes/default.rb:28:8 refactor: `Chef/Modernize/UseChefLanguageCloudHelpers`
 ## 1.2.7 - *2021-06-01*
 
 - resolved cookstyle error: recipes/default.rb:24:3 convention: `Style/RedundantAssignment`
