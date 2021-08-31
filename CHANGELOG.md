@@ -4,6 +4,8 @@ This file is used to list changes made in each version of the sensors cookbook.
 
 ## Unreleased
 
+- Standardise files with files in sous-chefs/repo-management
+
 ## 1.2.7 - *2021-06-01*
 
 - resolved cookstyle error: recipes/default.rb:24:3 convention: `Style/RedundantAssignment`
