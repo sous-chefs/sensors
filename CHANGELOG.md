@@ -5,6 +5,7 @@ This file is used to list changes made in each version of the sensors cookbook.
 ## Unreleased
 
 - Require Chef >= 15.5
+- Update to modern platforms to test against
 - resolved cookstyle error: recipes/default.rb:28:8 refactor: `Chef/Modernize/UseChefLanguageCloudHelpers`
 
 ## 1.2.8 - *2021-08-31*
