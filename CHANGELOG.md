@@ -4,6 +4,8 @@ This file is used to list changes made in each version of the sensors cookbook.
 
 ## Unreleased
 
+- Remove delivery folder
+
 ## 2.0.0 - *2021-11-01*
 
 - Require Chef >= 15.5
