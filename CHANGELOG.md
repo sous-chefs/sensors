@@ -4,7 +4,14 @@ This file is used to list changes made in each version of the sensors cookbook.
 
 ## Unreleased
 
+- Fix CI
+- Add renovate.json
+- Update sous-chefs/.github action to v2
+- Update actions/checkout action to v3
+
 ## 2.0.2 - *2023-02-14*
+
+- Remove Delivery
 
 ## 2.0.1 - *2022-02-08*
 
