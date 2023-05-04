@@ -2,7 +2,7 @@
 
 This file is used to list changes made in each version of the sensors cookbook.
 
-## Unreleased
+## 2.0.3 - *2023-05-04*
 
 - Fix CI
 - Add renovate.json
