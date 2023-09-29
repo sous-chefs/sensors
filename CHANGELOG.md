@@ -2,6 +2,8 @@
 
 This file is used to list changes made in each version of the sensors cookbook.
 
+## Unreleased
+
 ## 2.0.7 - *2023-09-29*
 
 ## 2.0.6 - *2023-09-04*
