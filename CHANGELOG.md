@@ -2,7 +2,7 @@
 
 This file is used to list changes made in each version of the sensors cookbook.
 
-## Unreleased
+## 2.0.11 - *2024-05-03*
 
 ## 2.0.10 - *2024-05-03*
 
