@@ -21,7 +21,7 @@
 def sanitize_name(name)
   name = name.downcase # data bags are lowercase
   name = name.delete('+') # + symbols aren't valid for mainboards
-  name.split('/')[0] # some mainboards report multiple models sep by /
+  name.split('/').first # some mainboards report multiple models sep by /
 end
 
 # Don't run on EC2 or virtualized systems
