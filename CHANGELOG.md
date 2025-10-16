@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of the sensors cookbook.
 
+## [2.0.13](https://github.com/sous-chefs/sensors/compare/2.0.12...v2.0.13) (2025-10-16)
+
+
+### Bug Fixes
+
+* **ci:** Update workflows to use release pipeline ([#71](https://github.com/sous-chefs/sensors/issues/71)) ([68b3131](https://github.com/sous-chefs/sensors/commit/68b31310fc5850b21256e02fa202ca53e807e5a4))
+
 ## 2.0.3 - *2023-05-04*
 
 * Fix CI
