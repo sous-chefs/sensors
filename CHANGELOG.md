@@ -2,6 +2,22 @@
 
 This file is used to list changes made in each version of the sensors cookbook.
 
+## [3.0.0](https://github.com/sous-chefs/sensors/compare/v2.0.13...v3.0.0) (2026-05-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* migrate sensors to custom resources ([#76](https://github.com/sous-chefs/sensors/issues/76))
+
+### Features
+
+* migrate sensors to custom resources ([#76](https://github.com/sous-chefs/sensors/issues/76)) ([456def5](https://github.com/sous-chefs/sensors/commit/456def5042aa52be525d2bbe072e54f5a1caf761))
+
+
+### Bug Fixes
+
+* **ci:** Update workflows to use release pipeline ([#71](https://github.com/sous-chefs/sensors/issues/71)) ([68b3131](https://github.com/sous-chefs/sensors/commit/68b31310fc5850b21256e02fa202ca53e807e5a4))
+
 ## [2.0.13](https://github.com/sous-chefs/sensors/compare/2.0.12...v2.0.13) (2025-10-16)
 
 
