@@ -3,7 +3,7 @@ driver:
   name: vagrant
 
 provisioner:
-  name: chef_infra
+  name: policyfile_zero
   product_name: chef
   product_version: latest
   channel: stable
@@ -11,6 +11,7 @@ provisioner:
   multiple_converge: 2
   enforce_idempotency: true
   deprecations_as_errors: true
+  policyfile: Policyfile.rb
 
 verifier:
   name: inspec
